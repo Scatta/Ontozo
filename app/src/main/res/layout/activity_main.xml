@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    style="@style/AppTheme"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/status_field"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="A Park vidám"
+        android:gravity="center"
+        android:textSize="16pt"/>
+
+    <ImageView android:id="@+id/status_img"
+        android:layout_height="40dp"
+        android:layout_width="wrap_content"
+        android:layout_toRightOf="@+id/status_field"
+        android:layout_gravity="center"
+        android:src="@drawable/happy"/>
+
+    <TextView
+        android:id="@+id/temperature_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/status_field"
+        android:text="Hőmérséklet:" />
+
+    <TextView
+        android:id="@+id/temperature_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/temperature_label"
+        android:layout_alignBottom="@id/temperature_label"
+        android:layout_marginLeft="24dp"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/humidity_label"
+        android:layout_below="@id/temperature_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nedvesség:" />
+
+    <TextView
+        android:id="@+id/humidity_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/humidity_label"
+        android:layout_alignBottom="@id/humidity_label"
+        android:layout_marginLeft="24dp"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/light_label"
+        android:layout_below="@id/humidity_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fény:" />
+
+    <TextView
+        android:id="@+id/light_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/light_label"
+        android:layout_alignBottom="@id/light_label"
+        android:layout_marginLeft="24dp"
+        android:text="" />
+
+    <EditText
+        android:id="@+id/address_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/light_label"
+        android:text="192.168.1.143" />
+
+    <EditText
+        android:id="@+id/port_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/light_label"
+        android:layout_toRightOf="@id/address_edit"
+        android:text="8086" />
+
+    <Button
+        android:id="@+id/show_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mutat"
+        android:layout_above="@id/light_label"
+        android:layout_alignRight="@+id/connect_button"
+        android:layout_alignBottom="@+id/light_label"/>
+
+    <Button
+        android:id="@+id/connect_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Csatlakozás"
+        android:layout_below="@id/light_label"
+        android:layout_alignParentRight="true"/>
+
+    <Button
+        android:id="@+id/weather_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/address_edit"
+        android:layout_alignBottom="@+id/motor_button"
+        android:text="Időjárás"/>
+
+    <Button
+        android:id="@+id/motor_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/connect_button"
+        android:layout_alignRight="@+id/connect_button"
+        android:text="Öntöző be"/>
+
+</RelativeLayout>
